@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationExtensions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-rex" translatesAutoresizingMaskIntoConstraints="NO" id="mEe-pg-S8u">
+                                <rect key="frame" x="20" y="10" width="360" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="liD-Ns-kji"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jVW-3q-KiF">
+                                <rect key="frame" x="20" y="295" width="360" height="95"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jurassic_world" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-ch-dKk">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.5" height="95"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fjg-VH-bFV">
+                                        <rect key="frame" x="206.5" y="0.0" width="153.5" height="95"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Welcome to Jurassic Park's lunch with a T-Rex. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-vP-Cvr">
+                                                <rect key="frame" x="0.0" y="0.0" width="153.5" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your on the menu!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxO-6z-u6w">
+                                                <rect key="frame" x="0.0" y="47.5" width="153.5" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61126923561096191" green="0.77562397718429565" blue="0.61432009935379028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jVW-3q-KiF" firstAttribute="trailing" secondItem="mEe-pg-S8u" secondAttribute="trailing" id="0Uw-qg-qhO"/>
+                            <constraint firstItem="mEe-pg-S8u" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="1Lb-bw-i6p"/>
+                            <constraint firstItem="mEe-pg-S8u" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="3BH-Eu-soZ"/>
+                            <constraint firstItem="jVW-3q-KiF" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="BdU-VG-arl"/>
+                            <constraint firstAttribute="bottom" secondItem="jVW-3q-KiF" secondAttribute="bottom" constant="10" id="HU7-Jr-d8e"/>
+                            <constraint firstItem="jVW-3q-KiF" firstAttribute="trailing" secondItem="mEe-pg-S8u" secondAttribute="trailing" id="JdO-1O-8cW"/>
+                            <constraint firstItem="mEe-pg-S8u" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="OLx-Cb-MiR"/>
+                            <constraint firstItem="jVW-3q-KiF" firstAttribute="leading" secondItem="mEe-pg-S8u" secondAttribute="leading" id="jpP-2n-fDw"/>
+                            <constraint firstItem="jVW-3q-KiF" firstAttribute="leading" secondItem="mEe-pg-S8u" secondAttribute="leading" id="ss2-0A-UMg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mEe-pg-S8u" secondAttribute="trailing" id="tbG-UQ-w0Z"/>
+                            <constraint firstItem="jVW-3q-KiF" firstAttribute="top" secondItem="mEe-pg-S8u" secondAttribute="bottom" constant="10" id="vy3-XU-Sy4"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="400" height="400"/>
+                    <connections>
+                        <outlet property="imageView" destination="mEe-pg-S8u" id="7tg-ZW-ehH"/>
+                        <outlet property="smallImageView" destination="Rdf-ch-dKk" id="opR-UZ-TCE"/>
+                        <outlet property="stackView" destination="fjg-VH-bFV" id="dpp-E9-i4J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="62.968515742128943"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jurassic_world" width="250" height="167"/>
+        <image name="t-rex" width="225" height="225"/>
+    </resources>
+</document>
