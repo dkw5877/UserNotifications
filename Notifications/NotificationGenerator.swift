@@ -64,6 +64,8 @@ class NotificationGenerator: NSObject {
             requestAuthorization()
         case .denied: break
         case .provisional:break
+        @unknown default:
+            fatalError("Unknown authorization status")
         }
         
     }
@@ -110,8 +112,8 @@ class NotificationGenerator: NSObject {
         content.title = "Jurassic Park"
         content.subtitle = "Lunch"
         content.body = "Its lunch time at the park, please join us for a dinosaur feeding"
-//        let sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "carhorn.wav"))
-//        content.sound = sound
+        let sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "carhorn.wav"))
+        content.sound = sound
         content.categoryIdentifier = CategoryIdentifiers.general
 
         if let url = Bundle.main.url(forResource: "jurassic_world", withExtension: "png") {
